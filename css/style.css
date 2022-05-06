@@ -1,0 +1,86 @@
+/* reset css zerar algumas formatações
+usar o seletor universal * 
+asterisco representa todos os elementos da página */
+* {
+    margin: 0;
+}
+/* declarando variáveis */
+:root {
+    --bg-dark: #000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--bg-dark);
+}
+
+.header-page {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    /* vertical */
+    align-items: center;
+
+    /* horizontal */
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li { 
+    margin: 0 15px;
+}
+
+
+
+
+
+
+
+
+.container {
+    width: 100%;
+    height: 100vh ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+    
+}
+
+.bg-image-1{
+    background-image: url(../images/pexels-negative-space-34140.jpg);
+}
+
+.bg-image-2 {
+    background-image: url(../images/pexels-expect-best-246684.jpg);
+}
+
+.bg-image-3 {
+    background-image: url(../images/pexels-picjumbocom-196659.jpg);
+}
+
+.bg-color-1 {
+    background-color: var(--bg-dark);
+}
+
+
+
+
+
+
+
+
+
+
+    
