@@ -3,10 +3,16 @@ usar o seletor universal *
 asterisco representa todos os elementos da página */
 * {
     margin: 0;
+    padding: 0;
+    /*tira o padding do navegador*/
+    box-sizing: border-box;
+    /* aplica o padding sem uma barra de rolagem horizontal*/
 }
 /* declarando variáveis */
 :root {
     --bg-dark: #000;
+    --color-primary:#fff;
+    --color-secondary:#dc143c;
 }
 
 body {
@@ -19,7 +25,7 @@ ul, ol {
 
 a {
     text-decoration: none;
-    color: var(--bg-dark);
+    color: var(--color-primary);
 }
 
 .header-page {
@@ -31,14 +37,41 @@ a {
 
     /* horizontal */
     justify-content: space-between;
-}
+    /* space-between: adciona espaço entre os filhos, caso tenha mais de dois a propriedade cuidará de centralizar corretamente*/
+    /* space-around: posiciona o filho central no meio e ajustas os outros em base dele, modificando o tamanho do espaçamento*/
+    /* space-evenly: poosiciona os filhos com base na divisão igual */
+   
+    padding: 0 20px;
 
-nav ul {
+    position: absolute;
+    /*cria um novo contexto de exibição para o elemento*/
+}
+.header-menu ul {
     display: flex;
 }
 
-nav li { 
-    margin: 0 15px;
+.header-menu li { 
+    margin: 0 10px;
+}
+.header-title{
+    font-size: 35px;
+    color: var(--color-primary);
+}
+.header-menu a{
+    font-size: 15px;
+    font-weight: 700;
+    color:var(--color-primary);
+    /*font-weight:  modifica a expessura da fonte*/
+    text-transform: uppercase;
+    /*text-transform: modifica o texto para uppercase*/
+    transition: .5;
+    /* transition: define como vai se comportar a transição, neste caso define como meio segundo*/
+}
+.header-menu a:hover{
+    color: var(--color-secondary);
+}
+.logo-color{
+    color: var(--color-secondary);
 }
 
 
@@ -57,16 +90,53 @@ nav li {
     background-attachment: fixed;
     
 }
+/* hero */
+.hero{
+    color:var(--color-primary);
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-title{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.hero-text{
+    width: 50%;
+    line-height: 30px;
+    /* muda espaçamento das linhas. Geralmente o dobro da fonte*/
+    margin-bottom: 40px;
+}
+.btm{
+    font-weight: 700;
+    border: 2px solid var(--color-secondary);
+    padding: 10px 30px;
+    border-radius: 70px;
+    background-color: var(--color-secondary);
+    transition: .5;
+    text-transform: uppercase;
+}
+.btm:hover{
+    background-color: transparent;
+}
+/* fim hero */
 
 .bg-image-1{
-    background-image: url(../images/pexels-negative-space-34140.jpg);
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 1),rgba(0,0,0,0))
+    /*linear-gradient irá aplicar o blur, utilizando duas ou mais cores*/
+    , url(../images/pexels-negative-space-34140.jpg);
 }
 
 .bg-image-2 {
     background-image: url(../images/pexels-expect-best-246684.jpg);
 }
 
-.bg-image-3 {
+.bg-image-3 { 
     background-image: url(../images/pexels-picjumbocom-196659.jpg);
 }
 
