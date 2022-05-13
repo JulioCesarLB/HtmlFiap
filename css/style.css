@@ -83,7 +83,7 @@ a {
 
 .container {
     width: 100%;
-    height: 100vh ;
+    min-height: 100vh ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -125,6 +125,79 @@ a {
     background-color: transparent;
 }
 /* fim hero */
+
+
+/* TECH */
+.tech{
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.tech-item{
+    height: 500px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.tech-icon{
+    font-size: 50px;
+    padding: 25px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    transition: .5s;
+    
+}
+.tech-icon:hover{
+    transform: rotate(720deg);
+    cursor: pointer;
+    
+}
+.tech-title{
+    margin: 20px 0;
+    font-size: 40px;
+    color: var(--color-secondary);
+}
+.tech-text{
+    margin:20px 0 30px;
+    font-size: 14px;
+}
+/* FIM TECH */
+
+/*gallery*/
+.gallery{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    /* para respeitar os seus tamanhos e quebrar a 'linha'*/
+    align-items: center;
+    justify-content: space-around;
+}
+.gallery-item{
+    width: 30%;
+    padding: 10px 10px 20px 10px;
+    background-color: var(--color-primary);
+    margin: 30px 0;
+    border-radius: 7px;
+    transition: .5s;
+}
+.gallery-item:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: var(--color-secondary);
+}
+.gallery-item img{
+    width: 100%;
+}
+.gallery-item figcaption{
+    font-size: 13px;
+    font-weight: 700;
+}
+/*fim galley*/
 
 .bg-image-1{
     background-image:linear-gradient(to top, rgba(0, 0, 0, 1),rgba(0,0,0,0))
