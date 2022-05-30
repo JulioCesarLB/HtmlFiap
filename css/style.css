@@ -14,6 +14,9 @@ asterisco representa todos os elementos da página */
     --color-primary:#fff;
     --color-secondary:#dc143c;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -118,7 +121,7 @@ a {
     padding: 10px 30px;
     border-radius: 70px;
     background-color: var(--color-secondary);
-    transition: .5;
+    transition: .5s;
     text-transform: uppercase;
 }
 .btm:hover{
@@ -168,6 +171,61 @@ a {
 }
 /* FIM TECH */
 
+/* INICIO DO SOLUTIONS */
+.solutions{
+     color:var(--color-primary);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 20px;
+     text-align: center;
+}
+.solution-title{
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+.solution-span{
+    display: block;
+}
+.solution-span::after{
+    content: 'Agronegócio';
+    animation: solution 7s infinite;
+}
+@keyframes solution{
+    25% {
+        content:'Transporte';
+    }
+
+    50% {
+        content: 'Educação';
+    }
+
+    75% {
+        content: 'Seguraça';
+    }
+}
+
+.gear{
+    margin-left: 5px;
+    animation: gear 1s linear infinite;
+}
+
+
+@keyframes gear {
+    from{
+        transform: rotate(-360deg);
+    }
+}
+.solution-text {
+    width: 60%;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+/*FIM SOLUTION*/
+
+
 /*gallery*/
 .gallery{
     padding: 20px;
@@ -206,7 +264,8 @@ a {
 }
 
 .bg-image-2 {
-    background-image: url(../images/pexels-expect-best-246684.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .5)),
+     url(../images/pexels-expect-best-246684.jpg);
 }
 
 .bg-image-3 { 
